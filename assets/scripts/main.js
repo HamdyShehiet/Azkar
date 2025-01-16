@@ -14,6 +14,7 @@ menuIcon.onclick=()=>{
     document.querySelector("main").appendChild(layer);
     }
 }
+
 toggleTheme.onclick=()=>{
     if(document.body.classList.contains("theme")){
         document.body.classList.remove("theme");
@@ -23,9 +24,9 @@ toggleTheme.onclick=()=>{
         document.body.classList.add("theme");
         toggleTheme.src="assets/icons/sun.webp";
         menuIcon.src="assets/icons/menu_dark.webp";
-
         }
     }
+
 fetch (`https://www.myjsons.com/v/b7d03829`)
     .then(res => res.json())
     .then(data =>{

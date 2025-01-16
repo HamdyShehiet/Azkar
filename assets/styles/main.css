@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 :root{
-    --header-color:#B9EAA8;
-    --body-color:#d1ebc9;
+    --main-color:#B9EAA8;
+    --body-color:#ffffff;
     --text-color-light:#ffffff;
     --title-color:#2F2223;
     --text-color:#5D5656;
@@ -28,7 +28,7 @@ body{
     background-color: var(--body-color);
 }
 body.theme{
-    --header-color:#2F2223;
+    --main-color:#2F2223;
     --body-color:#251819;
     --title-color:#F3F2F2;
     --text-color:#C2BDBD;
@@ -54,7 +54,7 @@ header{
     z-index: 10;
     width: 100%;
     padding: 20px 0;
-    background-color: var(--header-color);
+    background-color: var(--main-color);
 }
 header .container{
     display: flex;
@@ -91,7 +91,7 @@ header .container nav img{
         width: 60%;
         padding: 15px;
         border-radius: 15px;
-        background-color: var(--header-color);
+        background-color: var(--main-color);
         transition: all 200ms ease;
     }
     header .container nav ul.menu{
@@ -124,20 +124,29 @@ section{
     padding: 40px 0;
 }
 section .container  p{
+    margin-bottom: 20px;
     font-size: var(--fs-30px);
     font-weight: var(--fw-500);
     color: var(--title-color);
 }
 section .container  ol{
-    margin-top: 20px;
-    padding: 0 30px;
+    padding-right: 30px;
     list-style-type: decimal-leading-zero;
 }
 section .container  ol li{
     margin: 35px 0;
+    padding: 25px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--main-color);
     font-size: var(--fs-20px);
     font-weight: var(--fw-400);
-    line-height: 2;
+    line-height: 2.4;
+    color: var(--text-color);
+}
+section .container  ol li span:last-child{
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid var(--main-color);
     color: var(--title-color);
 }
 div.layer{
@@ -146,6 +155,6 @@ div.layer{
     opacity: .8;
     width: 100%;
     height: 100%;
-    background-color: #473636;
+    background-color: #887979;
     transition: all 200ms ease;
 }
