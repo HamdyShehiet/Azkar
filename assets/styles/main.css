@@ -4,10 +4,8 @@
     box-sizing: border-box;
 }
 :root{
-    --first-color:#DC3845;
-    --first-color-alt:#D42B39;
-    --body-color:#f1e7e7;
-    --container-color:#dad4d4;
+    --header-color:#B9EAA8;
+    --body-color:#d1ebc9;
     --text-color-light:#ffffff;
     --title-color:#282525;
     --text-color:#5D5656;
@@ -29,10 +27,8 @@ body{
     background-color: var(--body-color);
 }
 body.theme{
-    --first-color:#DB4D59;
-    --first-color-alt:#D42B39;
+    --header-color:#2F2223;
     --body-color:#251819;
-    --container-color:#2F2223;
     --title-color:#F3F2F2;
     --text-color:#C2BDBD;
 }
@@ -57,8 +53,7 @@ header{
     z-index: 10;
     width: 100%;
     padding: 15px 0;
-    border-bottom: 1px solid var(--first-color);
-    background-color: var(--container-color);
+    background-color: var(--header-color);
 }
 header .container{
     display: flex;
@@ -94,10 +89,10 @@ header .container nav img{
         width: 60%;
         padding: 15px;
         border-radius: 15px;
-        background-color: var(--container-color);
+        background-color: var(--header-color);
         transition: all 200ms ease;
     }
-    header .container nav .menu-icon{
+    header .container nav img{
         cursor: pointer;
     }
     header .container nav ul.menu{

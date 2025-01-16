@@ -16,6 +16,6 @@ toggleTheme.onclick=()=>{
     }else{
         document.body.classList.add("theme");
         toggleTheme.src="assets/icons/sun.webp";
-        menuIcon.src="assets/icons/menu_dark.webp"
+        menuIcon.src="assets/icons/menu_dark.webp";
+        }
     }
-}
