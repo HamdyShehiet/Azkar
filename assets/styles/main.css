@@ -6,11 +6,12 @@
 :root{
     --first-color:#DC3845;
     --first-color-alt:#D42B39;
-    --body-color:#ffffff;
+    --body-color:#f1e7e7;
+    --container-color:#dad4d4;
     --text-color-light:#ffffff;
-    --container-color:#ffffff;
     --title-color:#282525;
     --text-color:#5D5656;
+    --fs-30px:30px;
     --fs-24px:24px;
     --fs-20px:20px;
     --fs-16px:16px;
@@ -23,9 +24,9 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    font-family: "Poppins", serif;
+    font-family: "Amiri", serif;    
     font-weight: var(--fw-400);
-    background-color: var(--bg-color);
+    background-color: var(--body-color);
 }
 body.theme{
     --first-color:#DB4D59;
@@ -49,4 +50,75 @@ a{
 }
 img{
     max-width: 100%;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--first-color);
+    background-color: var(--container-color);
+}
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .container nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+header .container .logo a{
+    font-size: var(--fs-30px);
+    font-weight: var(--fw-600);
+    color: var(--title-color);
+}
+header .container nav ul li a{
+    display: block;
+    font-size: var(--fs-16px);
+    font-weight: var(--fw-600);
+    color: var(--title-color);
+}
+header .container nav img{
+    width: 20px;
+}
+@media (max-width:991px) {
+    header .container nav ul{
+        position: fixed;
+        top: 100px;
+        left: -100%;
+        z-index: 9;
+        max-width: 250px;
+        width: 60%;
+        padding: 15px;
+        border-radius: 15px;
+        background-color: var(--container-color);
+        transition: all 200ms ease;
+    }
+    header .container nav .menu-icon{
+        cursor: pointer;
+    }
+    header .container nav ul.menu{
+        left: 20px;
+    }
+    header .container nav ul li a{
+        display: block;
+        margin: 10px;
+        text-align: center;
+    }
+}
+@media (min-width:992px) {
+    header .container nav .menu-icon{
+        display: none;
+    }
+    header .container nav ul{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    header .container nav .toggle-theme{
+        margin-right: 30px;
+    }
 }
