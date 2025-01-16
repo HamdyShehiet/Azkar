@@ -7,8 +7,9 @@
     --header-color:#B9EAA8;
     --body-color:#d1ebc9;
     --text-color-light:#ffffff;
-    --title-color:#282525;
+    --title-color:#2F2223;
     --text-color:#5D5656;
+    --fs-34px:34px;
     --fs-30px:30px;
     --fs-24px:24px;
     --fs-20px:20px;
@@ -34,7 +35,7 @@ body.theme{
 }
 .container {
     margin: auto;
-    width: min(1050px , 100% - 40px);
+    width: min(1090px , 100% - 40px);
 }
 ul{
     list-style: none;
@@ -52,7 +53,7 @@ header{
     top: 0;
     z-index: 10;
     width: 100%;
-    padding: 15px 0;
+    padding: 20px 0;
     background-color: var(--header-color);
 }
 header .container{
@@ -66,7 +67,7 @@ header .container nav{
     gap: 20px;
 }
 header .container .logo a{
-    font-size: var(--fs-30px);
+    font-size: var(--fs-34px);
     font-weight: var(--fw-600);
     color: var(--title-color);
 }
@@ -78,11 +79,12 @@ header .container nav ul li a{
 }
 header .container nav img{
     width: 20px;
+    cursor: pointer;
 }
 @media (max-width:991px) {
     header .container nav ul{
         position: fixed;
-        top: 100px;
+        top: 110px;
         left: -100%;
         z-index: 9;
         max-width: 250px;
@@ -91,9 +93,6 @@ header .container nav img{
         border-radius: 15px;
         background-color: var(--header-color);
         transition: all 200ms ease;
-    }
-    header .container nav img{
-        cursor: pointer;
     }
     header .container nav ul.menu{
         left: 20px;
@@ -116,4 +115,37 @@ header .container nav img{
     header .container nav .toggle-theme{
         margin-right: 30px;
     }
+}
+main{
+    position: relative;
+}
+section{
+    min-height: 100vh;
+    padding: 40px 0;
+}
+section .container  p{
+    font-size: var(--fs-30px);
+    font-weight: var(--fw-500);
+    color: var(--title-color);
+}
+section .container  ol{
+    margin-top: 20px;
+    padding: 0 30px;
+    list-style-type: decimal-leading-zero;
+}
+section .container  ol li{
+    margin: 35px 0;
+    font-size: var(--fs-20px);
+    font-weight: var(--fw-400);
+    line-height: 2;
+    color: var(--title-color);
+}
+div.layer{
+    position: absolute;
+    top: 0;
+    opacity: .8;
+    width: 100%;
+    height: 100%;
+    background-color: #473636;
+    transition: all 200ms ease;
 }
