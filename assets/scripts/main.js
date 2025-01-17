@@ -30,7 +30,6 @@ toggleTheme.onclick=()=>{
 fetch (`https://www.myjsons.com/v/b7d03829`)
     .then(res => res.json())
     .then(data =>{
-        console.log(data);
         let morningList ="";
         for(let i = 0;i<data["أذكار الصباح"].length; i++){
             morningList +=`
