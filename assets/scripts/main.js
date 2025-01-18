@@ -15,17 +15,33 @@ menuIcon.onclick=()=>{
     }
 }
 
-toggleTheme.onclick=()=>{
-    if(document.body.classList.contains("theme")){
-        document.body.classList.remove("theme");
-        toggleTheme.src="assets/icons/moon.webp";
-        menuIcon.src="assets/icons/menu_light.webp"
-    }else{
+let theme = localStorage.getItem("theme");
+
+function darkMode(){
         document.body.classList.add("theme");
         toggleTheme.src="assets/icons/sun.webp";
         menuIcon.src="assets/icons/menu_dark.webp";
-        }
+        localStorage.setItem("theme", "darkMode")
+}
+function lightMode(){
+        document.body.classList.remove("theme");
+        toggleTheme.src="assets/icons/moon.webp";
+        menuIcon.src="assets/icons/menu_light.webp"
+        localStorage.setItem("theme", "lightMode")
+}
+if(theme == "darkMode"){
+    darkMode()
+}else{
+    lightMode();
+}
+toggleTheme.onclick=()=>{
+    theme = localStorage.getItem("theme");
+    if(theme !== "darkMode"){
+        darkMode();
+    }else{
+        lightMode();
     }
+}
 
 fetch (`https://www.myjsons.com/v/b7d03829`)
     .then(res => res.json())
